@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<!--<meta http-equiv="refresh" content="10"/>-->
+		<title>Jeu</title>	
+		<link rel="shortcut icon" href="img/mario.ico">
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet"/>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="style.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+	</head>
+
+	<body>
+		<!-- affichage de l'écran noir du début, pour commencer la partie -->
+		<div id="ecranDebut">
+			<h1 class="titre">Mario vs Luigi</h1>
+			<h2 class="titre">But du jeu: déplace-toi à l'aide de la souris pour aller chercher une arme plus puissante, puis gagne le combat face à ton adversaire!</h2>
+			<button id="commencer" class="btn btn-warning"><span class="clignotement">Commencez la partie</span></button>
+		</div>
+
+		<!-- affichage du jeu et des blocs légendes à côté et en dessous -->
+		<div class="container joueursGrille">
+			<div class="row">
+				<div class="joueurs align-self-center col-lg-3 col-md-6">
+					<div id="joueur-0" class="joueurs joueur align-self-center"></div>
+					<div class="joueur1"></div>
+				</div>
+				<table id="tableau" ></table>
+				<div class="joueurs align-self-center col-lg-3 col-md-6">
+					<div id="joueur-1" class="joueurs joueur align-self-center"></div>
+					<div class="joueur2"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div id="legende" class="row"></div>
+		</div>
+		
+		<!-- blocs invisibles pour plusieurs messages au cours du jeu -->
+		<div id="debutCombat">Un combat à mort s'apprête à commencer...</div>
+
+		<div id="question">
+			<div id="label"><span id="nomDuJoueur"></span>, souhaites-tu attaquer l'adversaire ou te défendre?</div><br/>
+			<div id="boutons">
+				<button id="attaquer" class="btn btn-warning">Attaquer</button>
+				<button id="defendre" class="btn btn-warning">Me défendre</button>
+			</div>
+		</div>
+
+		<div id="finCombat">
+			<span id="nomPerdant"></span> est mort ! Le combat est terminé ! <br/>
+			<button id="recommencer" class="btn btn-warning">Recommencer une partie</button>
+		</div>
+
+		<!-- Intégration de BootstrapJS, JS & jQuery-->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+		<script src="plateau.js"></script>
+		<script src="armes.js"></script>
+		<script src="joueurs.js"></script>
+		<script src="jeu.js"></script>
+	</body>
+</html>

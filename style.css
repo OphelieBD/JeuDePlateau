@@ -1,0 +1,546 @@
+body
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+td
+{
+	border: 1px solid grey;
+	box-shadow: 3px 3px 3px lightgrey;
+	background-color: rgba(103, 89, 74, 0.2);
+	width: 50px;
+	height: 50px;
+	text-align: center;
+}
+
+#tableau
+{
+	margin: auto;
+	margin-top: 20px;
+}
+
+#tableau img
+{
+	width: 45px;
+	max-height: 45px;
+}
+
+.caseNoire
+{
+	background-color: black;
+	box-shadow: 3px 3px 3px #3A3D38;
+}
+
+#legende
+{
+	text-align: center;
+	margin-top: 30px;
+	font-family: "Press Start 2P";
+	font-size: 0.6em;
+	padding-top: 5px;
+	padding-bottom: 10px;
+	background-color: #66CDE2;
+}
+
+#joueur-0
+{
+	border-radius: 30px;
+	border-bottom-right-radius: 0;
+	box-shadow: 3px 3px 3px rgb(85, 143, 164);
+}
+
+#joueur-1
+{
+	border-radius: 30px;
+	border-bottom-left-radius: 0;
+	box-shadow: 3px 3px 3px rgb(85, 143, 164);
+}
+
+
+ .joueur1, .joueur2
+ {
+ 	padding-top: 20px;
+ 	display: none;
+ 	height: 80px;
+ 	color: white;
+ 	background-color: rgba(0, 0, 0, 0.8);
+ 	margin-top: 50px;
+ }
+
+.legendeArme
+{
+	margin: auto;
+}
+
+.imageArme
+{
+	width: 40px;
+	height: auto;
+}
+
+.imageJoueur
+{
+	width: 70px;
+	height: auto;
+	margin: 30px;
+}
+
+.surbrillant
+{
+	background-color: rgba(29, 84, 105, 0.3) !important;
+	cursor: pointer;
+	border: 1px solid #1D5469;
+	box-shadow: 5px 5px 5px rgba(29, 84, 105, 0.8) !important;
+}
+
+.joueursGrille
+{
+	vertical-align: middle;
+}
+
+.joueurActuel
+{
+	background-color: #66CDE2;
+}
+
+.joueurs
+{
+	height: 50%;
+	text-align: center;
+	padding-bottom: 20px;
+	font-family: "Press Start 2P";
+	font-size: 0.8em;
+}
+
+#ecranDebut
+{
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	text-align: center;
+	padding-top: 50px;
+}
+
+.titre
+{
+	color: white;
+	padding-top: 55px;
+	font-family: "Press Start 2P";
+}
+
+h2
+{
+	font-size: 1em;
+	margin-right: 100px;
+	margin-left: 100px;
+}
+
+#commencer
+{
+	text-transform: uppercase;
+	font-family: "Press Start 2P";
+	color: #ffc107;
+	position: absolute;
+	bottom: 120px;
+	width: 50%;
+	margin-left: -25%;
+	padding: 20px;
+	border: none;
+}
+
+#commencer:hover
+{
+	background-color: #558FA4;
+	border: none;
+	color: #558FA4;
+}
+
+.clignotement 
+{ 
+ 	animation: couleurClignotement 1s infinite;
+}
+
+/* Règle qui définit les étapes de l''animation: */
+@keyframes couleurClignotement 
+{ 
+	0% { }
+	50% { color: black; } 
+}
+
+.arme
+{
+	background-color: rgba(255, 193, 7, 0.5);
+	box-shadow: 3px 3px 3px rgba(255, 193, 7, 0.5);
+}
+
+#question
+{
+	display: none;
+	z-index: 1;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 18%;
+	background-color: rgba(0, 0, 0, 0.8);
+	margin: 0;
+	color: white;
+	padding: 20px;
+	font-family: "Press Start 2P";
+	text-align: center;
+}
+
+#label, #boutons
+{
+	margin: auto;
+}
+
+#attaquer, #defendre, #recommencer
+{
+	border: none;
+}
+
+#recommencer
+{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#attaquer:hover, #defendre:hover, #recommencer:hover
+{
+	background-color: #558FA4;
+	border: none;
+}
+
+#label
+{
+	font-size: 0.8em;
+}
+
+#debutCombat, #finCombat
+{
+	display: none;
+	z-index: 1;
+	position: fixed;
+	left: 0;
+	bottom: 280px;
+	width: 100%;
+	height: 18%;
+	background-color: rgba(0, 0, 0, 0.8);
+	text-align: center;
+	color: white;
+	font-family: "Press Start 2P";
+	padding-top: 45px;
+}
+
+#finCombat
+{
+	height: 25% !important;
+ 	animation: couleurClignotementCombat 1s infinite;
+}
+
+/* règle qui définit les étapes de l'animation*/
+@keyframes couleurClignotementCombat
+{ 
+	0% { }
+	50% { color: rgba(0, 0, 0, 0.8); } 
+}
+
+ progress
+ {
+ 	position: absolute;
+ 	left: 50%;
+ 	transform: translate(-50%, -50%);
+ 	height: 10px;
+ 	width: auto;
+ 	color: #333 !important;
+ 	background-color: lightgrey !important;
+ }
+
+@media all and (max-width: 1199px)
+{
+	.joueursGrille
+	{
+		margin-top: 40px;
+	}
+
+	.joueurs
+	{
+		width: 100%;
+		margin-left: 30%;
+		margin-right: 30%;
+	}
+
+	progress
+	{
+		margin-left: 65px;
+	}
+
+	#joueur-1
+	{
+		margin-top: 30px;
+	}
+
+	#legende
+	{
+		margin-bottom: 50px;
+	}
+
+	#debutCombat, #question
+	{
+		height: 25%;
+	}
+
+	#finCombat
+	{
+		height: 40%;
+		padding-top: 10px;
+		padding-top: 20px;
+	}
+}
+
+@media all and (max-width: 992px)
+{
+	.joueurs
+	{
+		margin: auto;
+	}
+
+	progress
+	{
+		margin-left: 0;
+	}
+}
+
+@media all and (max-width: 820px)
+{
+	h1
+	{
+		font-size: 1.5em;
+	}
+
+	#commencer
+	{
+		bottom: 20px;
+	}
+}
+
+
+@media all and (max-width: 670px)
+{
+	#commencer
+	{
+		font-size: 0.7em;
+	}
+}
+
+@media all and (max-width: 650px)
+{
+	#finCombat
+	{
+		height: 45%;
+		padding-bottom: 20px;
+	}
+
+	#finCombat button
+	{
+		font-size: 0.7em;
+	}
+}
+
+@media all and (max-width: 575px)
+{
+	#legende
+	{
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+}
+
+@media all and (max-width: 530px)
+{
+	.case
+	{
+		width: 40px;
+		height: 40px;
+	}
+
+	.case img
+	{
+		height: 38px !important;
+		width: 38px !important;
+	}
+}
+
+
+@media all and (max-width: 500px)
+{
+	#commencer
+	{
+		font-size: 0.5em;
+	}
+
+	h1
+	{
+		font-size: 1.2em;
+		margin-top: 10px;
+		padding-top: 0px !important;
+		margin-bottom: 10px;
+	}
+
+	h2
+	{
+		margin: 20px;
+	}
+
+	#question
+	{
+		height: 30%;
+	}
+}
+
+@media all and (max-width: 410px)
+{
+	.case
+	{
+		width: 35px;
+		height: 35px;
+	}
+
+	.case img
+	{
+		height: 33px !important;
+		width: 33px !important;
+	}
+}
+
+@media all and (max-width: 408px)
+{
+	#attaquer, #defendre
+	{
+		font-size: 0.7em;
+	}
+
+	#debutCombat
+	{
+		height: 30%;
+		margin: auto;
+	}
+}
+
+@media all and (max-width: 372px)
+{
+	h1
+	{
+		font-size: 0.9em;
+	}
+
+	h2
+	{
+		font-size: 0.7em;
+	}
+
+	#commencer
+	{
+		font-size: 0.5em;
+		padding-left: 10px; 
+		padding-right: 10px; 
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}
+
+@media all and (max-width: 350px)
+{
+	.case
+	{
+		width: 30px !important;
+		height: 30px !important;
+	}
+
+	.case img
+	{
+		height: 28px !important;
+		width: 28px !important;
+	}
+}
+
+
+@media all and (max-width: 340px)
+{
+	#commencer
+	{
+		left: 140px;
+		width: 230px;
+	}
+}
+
+@media all and (max-width: 330px)
+{
+	#commencer
+	{
+		left: 120px;
+		width: 230px;
+	}
+}
+
+@media all and (max-width: 320px)
+{
+	#question
+	{
+		font-size: 0.7em;
+		height: 25%;
+	}
+
+	#attaquer, #defendre
+	{
+		font-size: 0.6em;
+	}
+}
+
+@media all and (max-width: 310px)
+{
+	#commencer
+	{
+		left: 100px;
+		width: 250px;
+	}
+}
+
+@media all and (max-width: 308px)
+{
+	.case
+	{
+		width: 25px !important;
+		height: 25px !important;
+	}
+
+	.case img
+	{
+		height: 23px !important;
+		width: 23px !important;
+	}
+}
+
+@media all and (max-width: 300px)
+{
+	#commencer
+	{
+		left: 100px;
+		width: 240px;
+	}
+}
+
+@media all and (max-width: 280px)
+{
+	#commencer
+	{
+		left: 100px;
+		width: 220px;
+	}
+}
